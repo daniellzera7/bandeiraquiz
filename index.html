@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BandeiraQuiz</title>
+</head>
+
+
+
+
+  
+<body>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Áudio -->
+    <audio id="minhaMusica" src="audios/Garota Malvada_fNsS_YRBoNE.mp3"></audio>
+
+    <!-- Container para outros ícones -->
+    <div class="container-icone">
+        <!-- Ícone de Reload -->
+        <i class="fa-solid fa-house icone" onClick="window.location.reload()"></i>
+
+        <i id="iconeMusica" class="fa-solid fa-volume-high icone" onclick="togglePlayPause()"></i>
+        <!-- Ícone de Compartilhar -->
+        <i class="fa-solid fa-face-smile icone" onclick="shareLink()"></i>
+    </div>
+
+        
+
+        
+    <div id="container">
+        <h1><strong>BandeiraQuiz</strong></h1>
+        <img id="bandeira" class="bandeira-imagem" alt="Bandeira do país" />
+        <p>De que país é esta bandeira?</p>
+        <div id="opcoes-container"></div>
+        <div id="pontuacao">Nível: Fácil - Pontuação: 0</div>
+        <div id="progress-bar">
+          <div id="progress"></div>
+      </div>
+  
+
+
+
+      <!-- Popup COMEÇAR -->
+<div id="popupcomecar" class="popup">
+  <div class="popup-content popupcomecar-content">
+    <img class="img" src="https://i.postimg.cc/rpgR6Sw6/Tudo-certo.png" alt="Perdeu" />
+    <p>Tudo certo!</p>
+    <button class="close-popup" onclick="closePopupComecar()">Começar</button>
+  </div>
+</div>
+
+
+
+
+<!-- Popup ERRADO -->
+<div id="popup" class="popup">
+  <div class="popup-content popuperrou-content">
+    <img class="img" src="https://i.postimg.cc/sD0TWCWg/Voc-errou.png" alt="Perdeu" />
+    <p>Você perdeu!</p>
+    <button class="close-popup" onclick="closePopup()">Recomeçar</button>
+  </div>
+</div>
+
+<!-- Popup ZEROU -->
+<div id="popupzerou" class="popup">
+  <div class="popup-content popupzerou-content">
+    <img class="img" src="https://i.postimg.cc/3N8tXK9d/Voc-zerou.png" alt="Perdeu" />
+    <p>Você zerou!</p>
+    <button class="close-popup" onclick="closePopup2()">Recomeçar</button>
+  </div>
+</div>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

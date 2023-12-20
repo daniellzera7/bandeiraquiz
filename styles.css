@@ -1,0 +1,196 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to bottom, #042041, #0b4208);
+    position: relative;
+}
+
+body {
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    position: relative;
+    border: 4px solid #5e5f6b;
+    text-align: center;
+    background: #202124;
+    padding: 16px;
+    border-radius: 18px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    margin-top: 1px;
+    text-shadow: 0 0px 22px rgba(0, 0, 0, 0.5);
+}
+
+#bandeira {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 12px;
+    margin: 10px 0;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.5);
+}
+
+#opcoes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    font-size: 20px;
+    margin: 15px;
+    margin-bottom: 18px;
+    margin-top: 4px;
+    text-shadow: 0 0px 22px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background-color: #5e5f6b;
+    color: #ffffff;
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    margin-bottom: -5px;
+}
+
+
+
+/* Media query para desktop (largura de tela maior que 768 pixels) */
+@media screen and (min-width: 769px) {
+  button:hover, button:focus {
+      /* Estilos específicos para desktop */
+      background-color: #4a4b57;
+      box-shadow: 0 0px 12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+
+#pontuacao {
+    font-size: 14px;
+    text-shadow: 0 0px 22px rgba(0, 0, 0, 0.5);
+    margin-bottom: 11px;
+}
+
+/* Adicione uma regra de mídia para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    body {
+        overflow-y: hidden; /* Desabilita a rolagem vertical em dispositivos móveis */
+    }
+}
+
+  
+#progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #ddd;
+    position: relative;
+    border-radius: 8px;
+  }
+
+  #progress {
+    height: 100%;
+    background: green; 
+    width: 100%;
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.5);
+    transition: width 0s linear; /* Adicionei a transição para a propriedade background */
+  }
+
+
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+  
+
+
+  .popup-content {
+    border: 4px solid #5e5f6b;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #202124;
+    padding: 16px;
+    border-radius: 18px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Centralizar o texto e o botão */
+  }
+
+  .popupzerou-content {
+    box-shadow: 0 0 80px rgba(255, 166, 0, 0.3);
+  }
+
+  .popuperrou-content {
+    box-shadow: 0 0 80px rgba(255, 0, 0, 0.3);
+  }
+
+  .popupcomecar-content {
+    box-shadow: 0 0 80px rgba(21, 255, 0, 0.3);
+  }
+
+  .popup-content .img {
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: 8px;
+    margin-top: -2px;
+    margin-bottom: 2px;
+  }
+
+
+  .close-popup {
+    background-color: #5e5f6b;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+    width: 100%;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.5);
+    margin-top: 1px; 
+    margin-bottom: 0px; 
+  }
+  
+
+
+
+  .container-icone {
+    position: fixed;
+    bottom: 0; /* Posiciona o contêiner na parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px; /* Espaçamento entre os ícones */
+    margin-bottom: 20px;
+}
+
+.icone {
+    font-size: 30px; /* Ajuste conforme necessário */
+    color: #ffffff; /* Cor dos ícones */
+    cursor: pointer;
+}
